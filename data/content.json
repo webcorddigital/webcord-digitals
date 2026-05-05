@@ -581,5 +581,67 @@
         "date": "Mar 2025"
       }
     ]
-  }
+  },
+  "homepageServices": [
+    {
+      "id": "svc-website",
+      "numberLabel": "01 — WEBSITE",
+      "title": "WEBSITE DEV",
+      "description": "Fast, mobile-first websites built to rank on Google and convert visitors into paying customers — delivered in 5–7 days.",
+      "features": [
+        "Fully responsive design",
+        "SEO-optimized structure",
+        "Google Maps integration",
+        "WhatsApp chat button",
+        "Google Analytics setup"
+      ],
+      "priceLabel": "From ₹7,000",
+      "deliveryLabel": "5–10 DAY DELIVERY"
+    },
+    {
+      "id": "svc-social",
+      "numberLabel": "02 — SOCIAL",
+      "title": "SOCIAL MEDIA",
+      "description": "Consistent, scroll-stopping content across Instagram and Facebook that builds your brand and grows your following every month.",
+      "features": [
+        "12–20 posts per month",
+        "Stories and Reels content",
+        "Captions & hashtags",
+        "Engagement management",
+        "Monthly performance report"
+      ],
+      "priceLabel": "From ₹3,000",
+      "deliveryLabel": "PER MONTH"
+    },
+    {
+      "id": "svc-video",
+      "numberLabel": "03 — VIDEO",
+      "title": "VIDEO & REELS",
+      "description": "Professional short-form video content edited, branded, and optimised for Instagram Reels, Facebook, and YouTube Shorts.",
+      "features": [
+        "30 sec to 2 min videos",
+        "Branded intros & outros",
+        "Promo & product videos",
+        "Event coverage",
+        "YouTube video editing"
+      ],
+      "priceLabel": "From ₹1,500",
+      "deliveryLabel": "PER PROJECT"
+    },
+    {
+      "id": "svc-full",
+      "numberLabel": "04 — FULL PACKAGE",
+      "title": "FULL DIGITAL",
+      "description": "Our flagship all-in-one retainer — website, social, video, and Google Ads managed entirely by the Webcord team.",
+      "features": [
+        "Website hosting & maintenance",
+        "Social media (Pro)",
+        "1 reel per month",
+        "Google Ads management",
+        "Monthly strategy call"
+      ],
+      "priceLabel": "₹12,000",
+      "deliveryLabel": "PER MONTH · ANNUAL: ₹10K/MO"
+    }
+  ]
 }

@@ -47,3 +47,13 @@ export interface Review {
   text: string;
   date: string;
 }
+
+export interface HomepageService {
+  id: string;
+  numberLabel: string;
+  title: string;
+  description: string;
+  features: string[];
+  priceLabel: string;
+  deliveryLabel: string;
+}

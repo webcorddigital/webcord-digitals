@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import content from "@/data/content.json";
 
-const { contactInfo } = content;
+const { contactInfo, homepageServices } = content;
 
 export default function HomePage() {
   // Scroll-reveal observer
@@ -120,58 +120,22 @@ function ServicesSection() {
         <p className="section-desc">Everything a local business needs to get found online, build trust, and bring in more customers — delivered fast.</p>
       </div>
       <div className="services-grid">
-        <div className="service-card reveal reveal-d1">
-          <div className="svc-num">01 — WEBSITE</div>
-          <h3>WEBSITE<br/>DEV</h3>
-          <p>Fast, mobile-first websites built to rank on Google and convert visitors into paying customers — delivered in 5–7 days.</p>
-          <ul className="svc-list">
-            <li>Fully responsive design</li>
-            <li>SEO-optimized structure</li>
-            <li>Google Maps integration</li>
-            <li>WhatsApp chat button</li>
-            <li>Google Analytics setup</li>
-          </ul>
-          <div className="svc-price">From ₹7,000<span>5–10 DAY DELIVERY</span></div>
-        </div>
-        <div className="service-card reveal reveal-d2">
-          <div className="svc-num">02 — SOCIAL</div>
-          <h3>SOCIAL<br/>MEDIA</h3>
-          <p>Consistent, scroll-stopping content across Instagram and Facebook that builds your brand and grows your following every month.</p>
-          <ul className="svc-list">
-            <li>12–20 posts per month</li>
-            <li>Stories and Reels content</li>
-            <li>Captions & hashtags</li>
-            <li>Engagement management</li>
-            <li>Monthly performance report</li>
-          </ul>
-          <div className="svc-price">From ₹3,000<span>PER MONTH</span></div>
-        </div>
-        <div className="service-card reveal reveal-d3">
-          <div className="svc-num">03 — VIDEO</div>
-          <h3>VIDEO &amp;<br/>REELS</h3>
-          <p>Professional short-form video content edited, branded, and optimised for Instagram Reels, Facebook, and YouTube Shorts.</p>
-          <ul className="svc-list">
-            <li>30 sec to 2 min videos</li>
-            <li>Branded intros &amp; outros</li>
-            <li>Promo &amp; product videos</li>
-            <li>Event coverage</li>
-            <li>YouTube video editing</li>
-          </ul>
-          <div className="svc-price">From ₹1,500<span>PER PROJECT</span></div>
-        </div>
-        <div className="service-card reveal reveal-d4">
-          <div className="svc-num">04 — FULL PACKAGE</div>
-          <h3>FULL<br/>DIGITAL</h3>
-          <p>Our flagship all-in-one retainer — website, social, video, and Google Ads managed entirely by the Webcord team.</p>
-          <ul className="svc-list">
-            <li>Website hosting &amp; maintenance</li>
-            <li>Social media (Pro)</li>
-            <li>1 reel per month</li>
-            <li>Google Ads management</li>
-            <li>Monthly strategy call</li>
-          </ul>
-          <div className="svc-price">₹12,000<span>PER MONTH · ANNUAL: ₹10K/MO</span></div>
-        </div>
+        {homepageServices.map((svc: any, index: number) => (
+          <div key={svc.id} className={`service-card reveal reveal-d${index + 1}`}>
+            <div className="svc-num">{svc.numberLabel}</div>
+            <h3 dangerouslySetInnerHTML={{ __html: svc.title }}></h3>
+            <p>{svc.description}</p>
+            <ul className="svc-list">
+              {svc.features.map((feature: string, fIndex: number) => (
+                <li key={fIndex}>{feature}</li>
+              ))}
+            </ul>
+            <div className="svc-price">
+              {svc.priceLabel}
+              {svc.deliveryLabel && <span>{svc.deliveryLabel}</span>}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

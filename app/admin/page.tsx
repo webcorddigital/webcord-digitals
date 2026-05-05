@@ -6,7 +6,7 @@ import { Plan } from "@/types";
 import styles from "./admin.module.css";
 
 export default function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState<"plans" | "settings">("plans");
+  const [activeTab, setActiveTab] = useState<"plans" | "services" | "settings">("plans");
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -99,6 +99,7 @@ export default function AdminDashboard() {
   if (error) return <div style={{ padding: "2rem", color: "red" }}>{error}</div>;
 
   const plans: Plan[] = data?.plans || [];
+  const homepageServices = data?.homepageServices || [];
   const websitePlans = plans.filter((p) => p.category === "website");
   const monthlyPlans = plans.filter((p) => p.category === "monthly");
   const videoPlans = plans.filter((p) => p.category === "video");
@@ -127,6 +128,29 @@ export default function AdminDashboard() {
     </div>
   );
 
+  const renderServicesGrid = (title: string, items: any[]) => (
+    <div style={{ marginBottom: "3rem" }}>
+      <h2 className={styles.sectionTitle}>{title}</h2>
+      <div className={styles.grid}>
+        {items.map((svc) => (
+          <div key={svc.id} className={styles.card}>
+            <div className={styles.cardMeta}>
+              <span>{svc.numberLabel}</span>
+            </div>
+            <h3 className={styles.cardTitle} dangerouslySetInnerHTML={{ __html: svc.title }} />
+            <div className={styles.cardPrice}>{svc.priceLabel}</div>
+            
+            <div className={styles.cardActions}>
+              <Link href={`/admin/edit-service/${svc.id}`} className={styles.btnSecondary}>
+                Edit Service
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div>
       <div className={styles.headerRow}>
@@ -141,6 +165,12 @@ export default function AdminDashboard() {
           Plans & Pricing
         </button>
         <button 
+          className={`${styles.tabBtn} ${activeTab === "services" ? styles.tabBtnActive : ""}`}
+          onClick={() => setActiveTab("services")}
+        >
+          Homepage Services
+        </button>
+        <button 
           className={`${styles.tabBtn} ${activeTab === "settings" ? styles.tabBtnActive : ""}`}
           onClick={() => setActiveTab("settings")}
         >
@@ -153,6 +183,12 @@ export default function AdminDashboard() {
           {renderGrid("Website Packages", websitePlans)}
           {renderGrid("Monthly Services", monthlyPlans)}
           {renderGrid("Video Content", videoPlans)}
+        </div>
+      )}
+
+      {activeTab === "services" && (
+        <div style={{ animation: "fadeIn 0.3s ease-out" }}>
+          {renderServicesGrid("Homepage Services Section", homepageServices)}
         </div>
       )}
 
