@@ -8,14 +8,24 @@ import styles from "./Navbar.module.css";
 export default function Navbar() {
   const { totalItems } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav>
-      <Link href="/" className="nav-logo" onClick={closeMenu}>
-        <span className="nav-dot"></span>WEBCORD
+      <Link href="/" className="nav-logo" onClick={closeMenu} style={{ display: "flex", alignItems: "center" }}>
+        {!logoError ? (
+          <img 
+            src="/images/logo/logo.png" 
+            alt="Webcord Logo" 
+            onError={() => setLogoError(true)}
+            style={{ height: "30px", width: "auto" }}
+          />
+        ) : (
+          <><span className="nav-dot"></span>WEBCORD</>
+        )}
       </Link>
 
       <ul className={`nav-links ${menuOpen ? "open" : ""}`} id="navLinks">
