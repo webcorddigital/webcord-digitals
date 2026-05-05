@@ -1,6 +1,6 @@
 "use client";
 // app/page.tsx
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import PricingSection from "@/components/PricingSection";
