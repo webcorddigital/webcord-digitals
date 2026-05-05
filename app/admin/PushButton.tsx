@@ -23,8 +23,8 @@ export default function PushButton() {
         btn.innerText = originalText;
         btn.disabled = false;
       }} 
-      className={styles.btn}
-      style={{ background: "#0070f3", color: "white", border: "none" }}
+      className={`${styles.btn} ${styles.btnAccent}`}
+      style={{ border: "none" }}
     >
       Push to Live 🚀
     </button>

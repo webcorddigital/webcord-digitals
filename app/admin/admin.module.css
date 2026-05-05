@@ -1,190 +1,298 @@
 /* app/admin/admin.module.css */
+
+/* ─── Variables & Base ─── */
 .adminLayout {
   min-height: 100vh;
-  background-color: #000;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #050505;
+  color: #ededed;
+  font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
 }
 
+/* ─── Navigation ─── */
 .adminNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #111;
-  border-bottom: 1px solid #333;
+  padding: 1rem 3rem;
+  background-color: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
 }
 
 .adminLogo {
+  font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .adminBadge {
-  background: #ff4500;
-  color: white;
+  background: rgba(255, 69, 0, 0.15);
+  color: #ff4500;
+  border: 1px solid rgba(255, 69, 0, 0.3);
   font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 4px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* ─── Buttons ─── */
+.btn {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:hover:not(:disabled) {
+  background: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #ededed;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btnAccent {
+  background: #ff4500;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 14px rgba(255, 69, 0, 0.3);
+}
+
+.btnAccent:hover:not(:disabled) {
+  background: #e63e00;
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+}
+
+/* ─── Main Content Area ─── */
 .adminMain {
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 3rem;
+  max-width: 1400px;
   margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .headerRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btn {
-  background: white;
-  color: black;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btn:hover {
-  background: #ddd;
-}
-
-.btnSecondary {
-  background: transparent;
-  color: white;
-  border: 1px solid #555;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btnSecondary:hover {
-  background: #222;
-}
-
+/* ─── Grid & Cards ─── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
 .card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 1.5rem;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.8rem;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover::before {
+  background: #ff4500;
 }
 
 .cardMeta {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  font-size: 12px;
-  color: #888;
+  margin-bottom: 1.2rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #777;
+}
+
+.cardMeta span:last-child {
+  color: #ff4500;
+  background: rgba(255, 69, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  color: #fff;
 }
 
 .cardPrice {
-  font-weight: bold;
-  color: #ff4500;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cardActions {
   margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #222;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: flex-end;
 }
 
-/* Edit Form Styles */
+/* ─── Edit Form Styles ─── */
 .editContainer {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 2rem;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 }
 
 .formGroup {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
-  font-size: 14px;
-  color: #bbb;
+  font-size: 13px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .input, .textarea {
   width: 100%;
-  background: #000;
-  border: 1px solid #333;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 4px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
   font-family: inherit;
   font-size: 15px;
+  transition: all 0.2s ease;
 }
 
 .input:focus, .textarea:focus {
   outline: none;
   border-color: #ff4500;
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.15);
 }
 
 .textarea {
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
+  line-height: 1.5;
 }
 
 .sectionTitle {
-  font-size: 1.2rem;
-  margin: 2rem 0 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #333;
+  font-size: 1.4rem;
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-weight: 700;
 }
 
 .arrayItem {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .arrayItem input {
@@ -192,38 +300,53 @@
 }
 
 .removeBtn {
-  background: #330000;
+  background: rgba(255, 68, 68, 0.1);
   color: #ff4444;
-  border: 1px solid #ff4444;
+  border: 1px solid rgba(255, 68, 68, 0.3);
   cursor: pointer;
-  padding: 0 10px;
-  border-radius: 4px;
+  padding: 0 14px;
+  border-radius: 8px;
   font-weight: bold;
+  transition: all 0.2s;
+}
+
+.removeBtn:hover {
+  background: #ff4444;
+  color: white;
 }
 
 .addBtn {
-  background: transparent;
-  color: #888;
-  border: 1px dashed #555;
+  background: rgba(255, 255, 255, 0.02);
+  color: #aaa;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.9rem;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-top: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 
 .addBtn:hover {
-  color: white;
-  border-color: white;
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .imageUpload {
-  border: 1px dashed #555;
-  padding: 2rem;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  padding: 3rem 2rem;
   text-align: center;
-  border-radius: 4px;
-  background: #050505;
-  margin-top: 0.5rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.imageUpload:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .imageUpload input[type="file"] {
@@ -231,17 +354,19 @@
 }
 
 .uploadLabel {
-  background: #222;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-block;
-  margin-top: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 
 .uploadLabel:hover {
-  background: #333;
+  background: #e0e0e0;
+  transform: translateY(-1px);
 }
 
 .currentImage {
@@ -253,10 +378,13 @@
 
 .lockedError {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 10rem 2rem;
 }
 
 .lockedError h1 {
   color: #ff4444;
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -2px;
 }

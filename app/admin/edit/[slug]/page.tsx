@@ -90,7 +90,7 @@ export default function EditPlanPage({ params }: { params: { slug: string } }) {
           <Link href="/admin" className={styles.btnSecondary}>← Back</Link>
           <h1 className={styles.title}>Edit {plan.name}</h1>
         </div>
-        <button onClick={handleSave} disabled={saving} className={styles.btn}>
+        <button onClick={handleSave} disabled={saving} className={`${styles.btn} ${styles.btnAccent}`}>
           {saving ? "Saving..." : "Save Changes"}
         </button>
       </div>
