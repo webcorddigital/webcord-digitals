@@ -6,8 +6,8 @@
       "category": "website",
       "badge": "Starter",
       "name": "STARTER SITE",
-      "price": 7000,
-      "priceLabel": "₹7,000",
+      "price": 7004,
+      "priceLabel": "₹7,004",
       "delivery": "5–7 days",
       "featured": false,
       "features": [
@@ -171,7 +171,7 @@
         }
       ],
       "reviewCount": 12,
-      "reviewAvg": 5.0
+      "reviewAvg": 5
     },
     {
       "id": "social-basic",
@@ -310,7 +310,7 @@
         }
       ],
       "reviewCount": 9,
-      "reviewAvg": 5.0
+      "reviewAvg": 5
     },
     {
       "id": "google-ads",
@@ -480,7 +480,7 @@
         }
       ],
       "reviewCount": 8,
-      "reviewAvg": 5.0
+      "reviewAvg": 5
     },
     {
       "id": "video-yt",
