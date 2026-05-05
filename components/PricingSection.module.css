@@ -1,0 +1,203 @@
+/* components/PricingSection.module.css */
+.section {
+  background: var(--bg);
+}
+
+.head {
+  max-width: 1400px;
+  margin: 0 auto 48px;
+}
+.head h2 { margin-bottom: 16px; }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: rgba(17,17,17,0.07);
+  border-radius: 50px;
+  padding: 5px;
+  width: fit-content;
+  margin: 0 auto 56px;
+}
+.tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  padding: 11px 28px;
+  border-radius: 50px;
+  transition: background 0.2s, color 0.2s;
+}
+.tabActive {
+  background: var(--black);
+  color: var(--off-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1.5px solid rgba(17,17,17,0.10);
+  border-radius: var(--r-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.card:hover {
+  border-color: rgba(17,17,17,0.25);
+  transform: translateY(-3px);
+}
+
+.cardFeatured {
+  background: var(--black);
+  border-color: var(--black);
+}
+.cardFeatured:hover { border-color: rgba(255,255,255,0.3); }
+
+.featuredBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--off-white);
+  color: var(--black);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.cardTop { margin-bottom: 28px; }
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-lt);
+  margin-bottom: 12px;
+}
+.cardFeatured .badge { color: rgba(255,255,255,0.35); }
+
+.planName {
+  font-family: var(--font-hero);
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.cardFeatured .planName { color: var(--off-white); }
+
+.price {
+  font-family: var(--font-hero);
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.cardFeatured .price { color: var(--off-white); }
+
+.delivery {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-lt);
+}
+.cardFeatured .delivery { color: rgba(255,255,255,0.3); }
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex: 1;
+}
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+.cardFeatured .feature { color: rgba(255,255,255,0.75); }
+
+.featureCheck {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--grey-mid);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.cardFeatured .featureCheck { color: rgba(255,255,255,0.4); }
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.addBtn {
+  background: var(--black);
+  color: var(--off-white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  padding: 15px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s, transform 0.2s;
+  width: 100%;
+}
+.addBtn:hover { opacity: 0.75; transform: scale(0.97); }
+.cardFeatured .addBtn {
+  background: var(--off-white);
+  color: var(--black);
+}
+
+.detailsLink {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  text-decoration: none;
+  padding: 8px;
+  transition: color 0.2s;
+}
+.detailsLink:hover { color: var(--black); }
+.cardFeatured .detailsLink { color: rgba(255,255,255,0.35); }
+.cardFeatured .detailsLink:hover { color: var(--off-white); }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}

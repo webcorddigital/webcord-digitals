@@ -1,0 +1,318 @@
+/* app/plans/[slug]/PlanDetail.module.css */
+
+.main {
+  padding-top: 64px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.backRow {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 48px 0;
+}
+.backLink {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.backLink:hover { color: var(--black); }
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 48px 96px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── LEFT ── */
+.planHeader { margin-bottom: 56px; }
+
+.planMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.planBadge {
+  background: var(--black);
+  color: var(--off-white);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+.planCategory {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey-lt);
+}
+
+.planTitle {
+  font-family: var(--font-hero);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.stars {
+  color: #f0a500;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.ratingNum {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.reviewCount {
+  font-size: 0.82rem;
+  color: var(--grey-mid);
+}
+
+.planDescription {
+  font-size: 1rem;
+  color: var(--black);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 640px;
+}
+
+/* ── BLOCKS ── */
+.block { margin-bottom: 56px; }
+
+.blockTitle {
+  font-family: var(--font-hero);
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  color: var(--black);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(17,17,17,0.1);
+}
+
+/* What you get */
+.getList { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.getItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: var(--black);
+  line-height: 1.6;
+}
+.getCheck {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--grey-mid);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Ideal for */
+.idealGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.idealItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--black);
+  line-height: 1.5;
+  background: var(--bg-light);
+  border-radius: var(--r-sm);
+  padding: 14px 16px;
+}
+.idealIcon { color: var(--grey-mid); flex-shrink: 0; font-family: var(--font-mono); font-size: 0.85rem; }
+
+/* FAQ */
+.faqList { display: flex; flex-direction: column; gap: 2px; }
+.faqItem {
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  border: 1px solid rgba(17,17,17,0.08);
+  background: var(--bg-light);
+  transition: border-color 0.2s;
+}
+.faqOpen { border-color: rgba(17,17,17,0.2); }
+.faqQ {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.5;
+}
+.faqToggle {
+  font-size: 1.2rem;
+  color: var(--grey-mid);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+.faqA {
+  padding: 0 20px 18px;
+  font-size: 0.88rem;
+  color: var(--grey-mid);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Reviews */
+.reviews { display: flex; flex-direction: column; gap: 16px; }
+.reviewCard {
+  background: var(--bg-light);
+  border-radius: var(--r-md);
+  padding: 24px;
+}
+.reviewTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+.reviewName {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 2px;
+}
+.reviewBusiness {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-lt);
+}
+.reviewRight { text-align: right; }
+.reviewStars {
+  color: #f0a500;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.reviewDate {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--grey-lt);
+}
+.reviewText {
+  font-size: 0.9rem;
+  color: var(--black);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ── RIGHT STICKY ── */
+.right { position: sticky; top: 88px; }
+
+.cartCard {
+  background: var(--bg-light);
+  border: 1.5px solid rgba(17,17,17,0.1);
+  border-radius: var(--r-lg);
+  padding: 32px;
+}
+
+.cartPriceRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.cartPrice {
+  font-family: var(--font-hero);
+  font-size: 2.8rem;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  line-height: 1;
+}
+.cartDelivery {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-lt);
+  margin-bottom: 4px;
+}
+
+.cartDivider {
+  height: 1px;
+  background: rgba(17,17,17,0.1);
+  margin: 20px 0;
+}
+
+.cartFeatures { display: flex; flex-direction: column; gap: 10px; }
+.cartFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--grey-mid);
+  line-height: 1.5;
+}
+
+.waBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: #128C7E;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+.waBtn:hover { background: rgba(37, 211, 102, 0.2); }
+
+.cartNote {
+  font-size: 0.75rem;
+  color: var(--grey-lt);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .right { position: static; }
+  .layout { padding: 32px 20px 64px; }
+  .idealGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .backRow { padding: 24px 20px 0; }
+}

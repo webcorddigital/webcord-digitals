@@ -1,0 +1,585 @@
+{
+  "plans": [
+    {
+      "id": "web-starter",
+      "slug": "starter-website",
+      "category": "website",
+      "badge": "Starter",
+      "name": "STARTER SITE",
+      "price": 7000,
+      "priceLabel": "₹7,000",
+      "delivery": "5–7 days",
+      "featured": false,
+      "features": [
+        "3-page website",
+        "Mobile responsive",
+        "Contact form",
+        "Google Maps embed",
+        "Basic SEO setup"
+      ],
+      "description": "The Starter Site is built for local businesses that need a clean, professional online presence — fast. No bloat, no fluff. Just a sharp 3-page site that tells your customers who you are, what you offer, and how to reach you.",
+      "whatYouGet": [
+        "3 fully designed pages (Home, About, Contact)",
+        "Mobile-first responsive design",
+        "Working contact form with email notifications",
+        "Google Maps integration",
+        "Basic on-page SEO (titles, meta, alt tags)",
+        "Free domain connection (if you have one)",
+        "1 round of revisions included"
+      ],
+      "idealFor": [
+        "New local businesses needing a first website",
+        "Freelancers and consultants",
+        "Businesses with a tight budget",
+        "Anyone who needs something live fast"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to buy a domain?",
+          "answer": "Yes, you'll need your own domain (e.g. yourbusiness.com). We'll help you connect it for free. Domains typically cost ₹800–1,200/year from providers like GoDaddy or Namecheap."
+        },
+        {
+          "question": "What about hosting?",
+          "answer": "Hosting is not included in this package. We'll recommend a reliable hosting provider suited to your needs and help you set it up. Typical hosting costs ₹2,000–4,000/year."
+        },
+        {
+          "question": "Can I add more pages later?",
+          "answer": "Absolutely. Additional pages can be added at ₹1,500 per page after delivery. We recommend starting lean and expanding as your business grows."
+        },
+        {
+          "question": "What do I need to provide?",
+          "answer": "Your logo (or we'll use text), your business photos (mobile photos are fine), a short description of your services, and your contact details. That's it."
+        },
+        {
+          "question": "Is this a WordPress site?",
+          "answer": "We build in whatever is best for your case — typically clean HTML/CSS or a lightweight CMS. We'll discuss the best option during your free consultation."
+        }
+      ],
+      "reviewCount": 18,
+      "reviewAvg": 4.9
+    },
+    {
+      "id": "web-business",
+      "slug": "business-website",
+      "category": "website",
+      "badge": "Most Popular",
+      "name": "BUSINESS SITE",
+      "price": 14000,
+      "priceLabel": "₹14,000",
+      "delivery": "7–10 days",
+      "featured": true,
+      "features": [
+        "6-page website",
+        "Custom design",
+        "WhatsApp chat button",
+        "Gallery / Portfolio",
+        "Advanced SEO setup",
+        "Google Analytics"
+      ],
+      "description": "The Business Site is our most popular package for a reason — it covers everything a serious local business needs to stand out online. Six pages, custom design, WhatsApp integration, and full SEO setup that actually helps people find you.",
+      "whatYouGet": [
+        "6 fully custom-designed pages",
+        "WhatsApp floating chat button (pre-linked to your number)",
+        "Photo gallery or portfolio section",
+        "Advanced on-page SEO (schema markup, sitemaps, robots.txt)",
+        "Google Analytics 4 integration",
+        "Mobile-first responsive design",
+        "Social media links integration",
+        "2 rounds of revisions included",
+        "30-day post-launch support"
+      ],
+      "idealFor": [
+        "Established local businesses ready to grow",
+        "Restaurants, salons, clinics, boutiques",
+        "Businesses that want to rank on Google locally",
+        "Owners who want WhatsApp as their primary lead channel"
+      ],
+      "faqs": [
+        {
+          "question": "Why is this the most popular package?",
+          "answer": "It hits the sweet spot between price and completeness. You get enough pages to tell your full story, SEO that works, and WhatsApp integration that converts visitors into customers the same day."
+        },
+        {
+          "question": "What's included in 'Advanced SEO'?",
+          "answer": "We set up page titles, meta descriptions, schema markup (so Google understands your business type), XML sitemap, robots.txt, and submit your site to Google Search Console."
+        },
+        {
+          "question": "Will I be able to edit the website myself?",
+          "answer": "If you want a CMS (content management system) so you can edit text yourself, let us know before we start — we'll build it accordingly. There's no extra charge for basic CMS setup."
+        },
+        {
+          "question": "How does the 30-day support work?",
+          "answer": "After launch, if anything breaks or you spot a small issue, we fix it free within 30 days. This doesn't cover new features — just keeping what was built in perfect shape."
+        }
+      ],
+      "reviewCount": 34,
+      "reviewAvg": 4.9
+    },
+    {
+      "id": "web-premium",
+      "slug": "premium-website",
+      "category": "website",
+      "badge": "Premium",
+      "name": "PREMIUM SITE",
+      "price": 25000,
+      "priceLabel": "₹25,000",
+      "delivery": "10–14 days",
+      "featured": false,
+      "features": [
+        "Unlimited pages",
+        "Custom animations",
+        "Booking / Enquiry system",
+        "Blog setup",
+        "Full SEO audit",
+        "Priority support"
+      ],
+      "description": "The Premium Site is for businesses that want a world-class online presence — the kind that makes competitors wonder who built it. Unlimited pages, custom animations, booking systems, and a full SEO audit that sets you up to rank for years.",
+      "whatYouGet": [
+        "Unlimited pages (we scope together during consultation)",
+        "Custom CSS animations and micro-interactions",
+        "Booking or enquiry system with email notifications",
+        "Blog setup with categories and search",
+        "Full technical SEO audit + implementation",
+        "Google Business Profile optimisation guidance",
+        "Custom 404 page and loading states",
+        "3 rounds of revisions included",
+        "60-day post-launch priority support",
+        "Monthly performance report (first month free)"
+      ],
+      "idealFor": [
+        "Premium businesses and high-end brands",
+        "Clinics and healthcare providers needing appointment booking",
+        "Real estate agencies and developers",
+        "Any business ready to invest seriously in digital"
+      ],
+      "faqs": [
+        {
+          "question": "What does 'unlimited pages' mean in practice?",
+          "answer": "We scope the number of pages together during your free consultation. Unlimited means we don't charge per page — the price covers whatever we agree is needed for your business."
+        },
+        {
+          "question": "How does the booking system work?",
+          "answer": "We integrate a booking or enquiry form that sends you an email and/or WhatsApp notification every time someone submits. For appointment-based businesses, we can integrate with Google Calendar."
+        },
+        {
+          "question": "Is the full SEO audit worth it?",
+          "answer": "For most local businesses in Punjab, yes. We identify exactly what keywords your customers are searching, optimise your pages for those terms, and set up tracking so you can see results over time."
+        },
+        {
+          "question": "Can I pay in instalments?",
+          "answer": "Yes. For orders above ₹10,000, EMI is available. Typically 50% upfront and 50% on delivery — or a 3-month split. We'll discuss what works for you."
+        }
+      ],
+      "reviewCount": 12,
+      "reviewAvg": 5.0
+    },
+    {
+      "id": "social-basic",
+      "slug": "social-media-basic",
+      "category": "monthly",
+      "badge": "Social",
+      "name": "SOCIAL BASIC",
+      "price": 4999,
+      "priceLabel": "₹4,999/mo",
+      "delivery": "Ongoing monthly",
+      "featured": false,
+      "features": [
+        "12 posts/month",
+        "Instagram + Facebook",
+        "Caption copywriting",
+        "Hashtag research"
+      ],
+      "description": "Social Basic keeps your Instagram and Facebook active and professional without breaking the bank. Consistent posting, quality captions, and the right hashtags — the foundation of any local brand's online presence.",
+      "whatYouGet": [
+        "12 designed posts per month (3 per week)",
+        "Instagram and Facebook posting",
+        "Caption copywriting for every post",
+        "Monthly hashtag research and strategy",
+        "Content calendar shared with you each month",
+        "Monthly performance report"
+      ],
+      "idealFor": [
+        "Businesses just starting their social media journey",
+        "Owners who want consistent posting without the hassle",
+        "Tight budgets that still need professional content"
+      ],
+      "faqs": [
+        {
+          "question": "Do you handle posting, or just create content?",
+          "answer": "We handle everything — design, caption, hashtags, and posting. You just approve the monthly calendar and we take it from there."
+        },
+        {
+          "question": "Can I request specific post topics?",
+          "answer": "Yes. Each month we share a content calendar. You can request topics, promotions, or events you want covered before we start designing."
+        },
+        {
+          "question": "What if I want to cancel?",
+          "answer": "Monthly plans require 15 days' notice to cancel. No long-term contracts — just give us a heads-up and we'll wrap up cleanly."
+        }
+      ],
+      "reviewCount": 22,
+      "reviewAvg": 4.8
+    },
+    {
+      "id": "social-growth",
+      "slug": "social-media-growth",
+      "category": "monthly",
+      "badge": "Growth",
+      "name": "SOCIAL GROWTH",
+      "price": 8999,
+      "priceLabel": "₹8,999/mo",
+      "delivery": "Ongoing monthly",
+      "featured": true,
+      "features": [
+        "20 posts/month",
+        "Instagram + Facebook + Google",
+        "2 Reels/month",
+        "Story templates",
+        "Ad creative (1 campaign)"
+      ],
+      "description": "Social Growth is for businesses ready to actually grow their online audience — not just maintain it. More posts, Reels, Stories, and a full ad creative package to push your reach beyond just organic.",
+      "whatYouGet": [
+        "20 designed posts per month",
+        "2 professionally edited Reels per month",
+        "Instagram Story templates (5/month)",
+        "Instagram, Facebook, and Google Business posting",
+        "Ad creative for 1 paid campaign",
+        "Caption copywriting and hashtag strategy",
+        "Monthly analytics report with insights"
+      ],
+      "idealFor": [
+        "Businesses actively growing their customer base",
+        "Restaurants, cafés, and retail shops",
+        "Brands that want Reels as part of their strategy"
+      ],
+      "faqs": [
+        {
+          "question": "What's included in the ad creative?",
+          "answer": "We design 2–3 ad creatives (images/graphics) for 1 paid campaign per month. Ad spend (budget you pay to Meta/Google) is separate and not included."
+        },
+        {
+          "question": "How are Reels filmed?",
+          "answer": "For Reels, you or your team films the raw footage and sends it to us. We handle editing, captions, music, and posting. If you need on-site filming, check our Video packages."
+        }
+      ],
+      "reviewCount": 28,
+      "reviewAvg": 4.9
+    },
+    {
+      "id": "social-pro",
+      "slug": "social-media-pro",
+      "category": "monthly",
+      "badge": "Pro",
+      "name": "SOCIAL PRO",
+      "price": 14999,
+      "priceLabel": "₹14,999/mo",
+      "delivery": "Ongoing monthly",
+      "featured": false,
+      "features": [
+        "30 posts/month",
+        "All platforms",
+        "4 Reels/month",
+        "Full ad management",
+        "Monthly strategy call",
+        "Dedicated account manager"
+      ],
+      "description": "Social Pro is our full-service social media management. You get a dedicated account manager, full ad management, 4 Reels a month, and a monthly strategy call to keep everything aligned with your business goals.",
+      "whatYouGet": [
+        "30 designed posts per month across all platforms",
+        "4 professionally edited Reels per month",
+        "Instagram Story templates (10/month)",
+        "Full ad campaign management (up to 3 campaigns)",
+        "Monthly strategy call (30 minutes)",
+        "Dedicated account manager (WhatsApp access)",
+        "Competitor analysis report (quarterly)",
+        "Full monthly analytics report"
+      ],
+      "idealFor": [
+        "Serious brands that want maximum online visibility",
+        "Businesses running paid campaigns alongside organic",
+        "Owners who want a hands-off, agency-managed approach"
+      ],
+      "faqs": [
+        {
+          "question": "What does 'full ad management' include?",
+          "answer": "We create, monitor, and optimise your paid campaigns on Meta (Instagram/Facebook). Ad spend is your budget, paid directly to Meta. We handle everything else."
+        },
+        {
+          "question": "How do I reach my account manager?",
+          "answer": "Via WhatsApp — directly, during business hours. You'll get a response within a few hours, not days."
+        }
+      ],
+      "reviewCount": 9,
+      "reviewAvg": 5.0
+    },
+    {
+      "id": "google-ads",
+      "slug": "google-ads-management",
+      "category": "monthly",
+      "badge": "Ads",
+      "name": "GOOGLE ADS",
+      "price": 5999,
+      "priceLabel": "₹5,999/mo",
+      "delivery": "Ongoing monthly",
+      "featured": false,
+      "features": [
+        "Search campaign setup",
+        "Keyword research",
+        "Ad copywriting",
+        "Monthly optimisation",
+        "Performance reporting"
+      ],
+      "description": "Google Ads Management puts your business at the top of search results when customers in your area are actively looking for what you sell. We handle setup, keywords, copy, and monthly optimisation — you focus on handling the leads.",
+      "whatYouGet": [
+        "Full Google Search campaign setup",
+        "In-depth keyword research for your locality",
+        "Ad copy written and tested",
+        "Negative keyword management",
+        "Monthly bid and budget optimisation",
+        "Conversion tracking setup",
+        "Monthly performance report"
+      ],
+      "idealFor": [
+        "Businesses that want immediate lead flow from Google",
+        "Clinics, law firms, and service providers",
+        "Any business in a competitive local market"
+      ],
+      "faqs": [
+        {
+          "question": "Is ad spend included?",
+          "answer": "No. The ₹5,999 is our management fee. Your ad spend (what you pay Google) is separate — we recommend a minimum of ₹5,000/month ad budget to see meaningful results."
+        },
+        {
+          "question": "How soon will I see results?",
+          "answer": "Google Ads can drive traffic from day one. Most clients start seeing enquiries within the first week. Full optimisation takes 4–6 weeks as we gather data."
+        }
+      ],
+      "reviewCount": 15,
+      "reviewAvg": 4.8
+    },
+    {
+      "id": "video-reel",
+      "slug": "promo-reel",
+      "category": "video",
+      "badge": "Reels",
+      "name": "PROMO REEL",
+      "price": 2500,
+      "priceLabel": "₹2,500",
+      "delivery": "30–60 sec promo",
+      "featured": false,
+      "features": [
+        "Professional editing",
+        "Branded intro & outro",
+        "Instagram / Facebook ready"
+      ],
+      "description": "A short, punchy promo reel that makes people stop scrolling. We edit your raw footage into a 30–60 second branded video with music, captions, and your logo — ready to go viral on Instagram and Facebook.",
+      "whatYouGet": [
+        "30–60 second edited promo video",
+        "Branded intro and outro with your logo",
+        "Background music (licensed)",
+        "On-screen captions/subtitles",
+        "Optimised for Instagram Reels, Facebook, and WhatsApp Status",
+        "1 revision included"
+      ],
+      "idealFor": [
+        "Businesses wanting a quick promotional video",
+        "Product or service launches",
+        "Festival/seasonal promotions"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to film the footage?",
+          "answer": "Yes — you film the raw clips on your phone and send them to us via WhatsApp or Google Drive. We handle all the editing, music, and branding."
+        },
+        {
+          "question": "How long does it take?",
+          "answer": "Typically 2–4 business days from when we receive your footage."
+        }
+      ],
+      "reviewCount": 31,
+      "reviewAvg": 4.9
+    },
+    {
+      "id": "video-service",
+      "slug": "service-video",
+      "category": "video",
+      "badge": "Product Video",
+      "name": "SERVICE VIDEO",
+      "price": 4000,
+      "priceLabel": "₹4,000",
+      "delivery": "1–2 minute video",
+      "featured": true,
+      "features": [
+        "Product or service showcase",
+        "Branded design",
+        "Multi-platform optimised"
+      ],
+      "description": "A 1–2 minute showcase video that explains what you do and why you're the best at it. Perfect for your website homepage, YouTube channel, or as a pinned Instagram post that converts profile visitors into enquiries.",
+      "whatYouGet": [
+        "1–2 minute fully edited showcase video",
+        "Professional colour grading",
+        "Branded lower thirds and titles",
+        "Background music (licensed)",
+        "Optimised for YouTube, Instagram, and website embed",
+        "2 revisions included"
+      ],
+      "idealFor": [
+        "Businesses wanting a website hero video",
+        "Service providers who want to explain their process",
+        "Gyms, clinics, and studios wanting a brand video"
+      ],
+      "faqs": [
+        {
+          "question": "Can you come and film for us?",
+          "answer": "On-site filming is available separately — check our Event Coverage package or contact us for a custom quote. This package assumes you provide the raw footage."
+        },
+        {
+          "question": "What format do I receive the final video in?",
+          "answer": "MP4 in 1080p. We can also provide a vertical (9:16) cut for Instagram and a horizontal (16:9) cut for YouTube at no extra cost."
+        }
+      ],
+      "reviewCount": 19,
+      "reviewAvg": 4.9
+    },
+    {
+      "id": "video-event",
+      "slug": "event-coverage",
+      "category": "video",
+      "badge": "Events",
+      "name": "EVENT COVERAGE",
+      "price": 6000,
+      "priceLabel": "₹6,000",
+      "delivery": "Half-day shoot",
+      "featured": false,
+      "features": [
+        "On-site filming",
+        "Professional editing",
+        "Highlight reel"
+      ],
+      "description": "Professional event coverage for your launch, inauguration, workshop, or any business event. We come to you, film everything important, and deliver a polished highlight reel that makes your event look like a premium production.",
+      "whatYouGet": [
+        "Up to 4 hours of on-site filming (Phagwara / Jalandhar area)",
+        "Professional highlight reel (3–5 minutes)",
+        "Short social cut (60–90 seconds for Reels)",
+        "Colour graded footage",
+        "Travel included within 30km of Phagwara"
+      ],
+      "idealFor": [
+        "Grand openings and inaugurations",
+        "Business events, workshops, and seminars",
+        "Product launches and brand events"
+      ],
+      "faqs": [
+        {
+          "question": "What areas do you cover?",
+          "answer": "We cover Phagwara, Jalandhar, Kapurthala, Ludhiana, and nearby areas. For events further away, a small travel fee may apply — we'll tell you upfront."
+        },
+        {
+          "question": "How long until we get the final video?",
+          "answer": "Edited highlight reel delivered within 5–7 business days after the event."
+        }
+      ],
+      "reviewCount": 8,
+      "reviewAvg": 5.0
+    },
+    {
+      "id": "video-yt",
+      "slug": "youtube-editing",
+      "category": "video",
+      "badge": "YouTube",
+      "name": "YT EDITING",
+      "price": 1500,
+      "priceLabel": "₹1,500",
+      "delivery": "Per video",
+      "featured": false,
+      "features": [
+        "Full video editing",
+        "Thumbnails included",
+        "SEO title & description"
+      ],
+      "description": "Per-video YouTube editing for businesses and creators who want a consistent, professional channel without doing the editing themselves. Send us your raw footage, we send back a publish-ready video with thumbnail and SEO copy.",
+      "whatYouGet": [
+        "Full video editing (up to 15 minutes raw footage)",
+        "Custom thumbnail design",
+        "SEO-optimised title and description",
+        "End screen and cards setup",
+        "Captions/subtitles",
+        "1 revision included"
+      ],
+      "idealFor": [
+        "Business owners running a YouTube channel",
+        "Coaches and educators",
+        "Anyone who films content but hates editing"
+      ],
+      "faqs": [
+        {
+          "question": "Is there a discount for bulk orders?",
+          "answer": "Yes. 4+ videos/month: ₹1,200/video. 8+ videos/month: ₹1,000/video. Contact us to set up a monthly arrangement."
+        },
+        {
+          "question": "What raw footage format do you accept?",
+          "answer": "Any format recorded on a phone or camera is fine. Send via Google Drive, WeTransfer, or WhatsApp for smaller files."
+        }
+      ],
+      "reviewCount": 24,
+      "reviewAvg": 4.8
+    }
+  ],
+  "contactInfo": {
+    "whatsapp": "+91 88914 19003",
+    "whatsappRaw": "918891419003",
+    "email": "hello@webcord.in",
+    "website": "webcord.in",
+    "location": "Phagwara, Punjab, India"
+  },
+  "reviews": {
+    "web-business": [
+      {
+        "name": "Harpreet Singh",
+        "business": "HS Auto Works, Phagwara",
+        "rating": 5,
+        "text": "Got my website in 8 days and it looks incredible. My competitors have no idea how I did it so fast. The WhatsApp button alone has brought in 6 new customers.",
+        "date": "Mar 2025"
+      },
+      {
+        "name": "Priya Sharma",
+        "business": "Glow Skin Clinic, Jalandhar",
+        "rating": 5,
+        "text": "Very professional team. They understood exactly what a clinic website needs. SEO is already working — we're showing up on Google for 'skin clinic Jalandhar'.",
+        "date": "Feb 2025"
+      },
+      {
+        "name": "Mandeep Kaur",
+        "business": "Kaur's Boutique, Kapurthala",
+        "rating": 5,
+        "text": "My boutique needed a proper online presence for years. Webcord delivered in a week. Honest pricing, no surprises. Will definitely use again.",
+        "date": "Jan 2025"
+      }
+    ],
+    "social-growth": [
+      {
+        "name": "Gurjeet Malhotra",
+        "business": "Malhotra Café, Phagwara",
+        "rating": 5,
+        "text": "Our Instagram went from 400 followers doing nothing to 2,100 active followers in 4 months. The Reels get 10× more views than anything we posted before.",
+        "date": "Apr 2025"
+      },
+      {
+        "name": "Simran Dhaliwal",
+        "business": "FitLife Gym, Jalandhar",
+        "rating": 5,
+        "text": "Best investment we made for the gym. Content is always on time, always high quality. Our enquiries doubled within 3 months.",
+        "date": "Mar 2025"
+      }
+    ],
+    "video-service": [
+      {
+        "name": "Rajiv Mehra",
+        "business": "Mehra Real Estate, Phagwara",
+        "rating": 5,
+        "text": "The service video for our website is outstanding. We sent basic footage from a phone and they turned it into something that looks completely professional.",
+        "date": "Mar 2025"
+      }
+    ]
+  }
+}
