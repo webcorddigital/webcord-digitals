@@ -39,7 +39,7 @@ export default function WorksPage() {
             </div>
           ) : (
             <div className={styles.grid}>
-              {works.map((work) => (
+              {works?.map((work: any) => (
                 <WorkCard key={work._id} work={work} />
               ))}
             </div>
@@ -53,10 +53,10 @@ export default function WorksPage() {
 
           {approvedReviews && approvedReviews.length > 0 && (
             <div className={styles.reviewGrid}>
-              {approvedReviews.map((r) => (
+              {approvedReviews?.map((r: any) => (
                 <div key={r._id} className={styles.reviewCard}>
                   <div className={styles.stars}>
-                    {Array.from({ length: r.rating }).map((_, i) => (
+                    {Array.from({ length: r.rating }).map((_: any, i: number) => (
                       <Star key={i} size={14} fill="currentColor" />
                     ))}
                   </div>
@@ -84,38 +84,42 @@ export default function WorksPage() {
 
 function WorkCard({ work }: { work: any }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.cardImg}>
+    <div className={styles.premiumCard}>
+      <div className={styles.premiumImgWrapper}>
         {work.imageUrl ? (
-          <img src={work.imageUrl} alt={work.title} />
+          <img src={work.imageUrl} alt={work.title} className={styles.premiumImg} />
         ) : (
           <div className={styles.imgPlaceholder}>
             <span>WEBCORD</span>
           </div>
         )}
-        <a
-          href={work.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.visitBtn}
-        >
-          <ExternalLink size={14} />
-          Visit Site
-        </a>
       </div>
-      <div className={styles.cardBody}>
-        <h3 className={styles.cardTitle}>{work.title}</h3>
-        {work.description && (
-          <p className={styles.cardDesc}>{work.description}</p>
-        )}
-        <a
-          href={work.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.cardLink}
-        >
-          {work.link.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-        </a>
+      
+      <div className={styles.premiumBody}>
+        <div className={styles.premiumHeader}>
+          {work.category && (
+            <div className={styles.premiumBadges}>
+              <span className={styles.premiumBadge}>{work.category}</span>
+            </div>
+          )}
+          <h3 className={styles.premiumTitle}>{work.title}</h3>
+        </div>
+        
+        <p className={styles.premiumDesc}>
+          {work.description || "A stunning website crafted with precision and care for our valued client."}
+        </p>
+        
+        <div className={styles.premiumFooter}>
+          <a
+            href={work.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.premiumBtn}
+          >
+            Visit Site
+            <ExternalLink size={14} />
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -188,7 +192,7 @@ function ReviewForm() {
         <div className="form-group" style={{ marginBottom: "16px" }}>
           <label className="form-label">Rating</label>
           <div className={styles.ratingPicker}>
-            {[1, 2, 3, 4, 5].map((n) => (
+            {[1, 2, 3, 4, 5].map((n: number) => (
               <button
                 key={n}
                 type="button"
