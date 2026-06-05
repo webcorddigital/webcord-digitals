@@ -1,6 +1,6 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
-import content from "../../webcord/data/content.json";
+import content from "../data/content.json";
 
 // ─────────────────────────────────────────────────────────────
 // QUERIES
