@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn npx vercel project rm webcord --token $env(VTOKEN)
+expect "? Are you sure? (y/N)"
+send "y\r"
+expect eof
