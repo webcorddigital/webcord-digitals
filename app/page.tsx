@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import PricingSection from "@/components/PricingSection";
 import { 
-  Utensils, Scissors, HeartPulse, ShoppingBag, Dumbbell, Coffee, Building2, Rocket,
+  UtensilsCrossed, Scissors, Stethoscope, Store, Dumbbell, Coffee, Home, Rocket,
   Zap, Tags, MapPin, BarChart3, Handshake, CheckCircle2, Ban, CreditCard, MessageSquare
 } from "lucide-react";
 import content from "@/data/content.json";
@@ -254,14 +254,14 @@ function IndustriesSection() {
         <h2>LOCAL BUSINESSES<br/>ACROSS PUNJAB.</h2>
       </div>
       <div className="industries-grid">
-        <div className="industry-card reveal reveal-d1"><div className="ind-circle"><Utensils size={24} /></div><h4>RESTAURANTS</h4><p>Menus, delivery pages, Google presence, and food reels that fill tables.</p></div>
-        <div className="industry-card reveal reveal-d2"><div className="ind-circle"><Scissors size={24} /></div><h4>SALONS &amp; SPAS</h4><p>Booking pages, service galleries, and Instagram content that builds clientele.</p></div>
-        <div className="industry-card reveal reveal-d3"><div className="ind-circle"><HeartPulse size={24} /></div><h4>CLINICS</h4><p>Professional websites, appointment systems, and local SEO for healthcare providers.</p></div>
-        <div className="industry-card reveal reveal-d4"><div className="ind-circle"><ShoppingBag size={24} /></div><h4>BOUTIQUES</h4><p>Product showcases, WhatsApp catalogues, and Reels that drive walk-ins.</p></div>
-        <div className="industry-card reveal reveal-d1"><div className="ind-circle"><Dumbbell size={24} /></div><h4>GYMS &amp; STUDIOS</h4><p>Class schedules, membership pages, and content that builds a local fitness brand.</p></div>
-        <div className="industry-card reveal reveal-d2"><div className="ind-circle"><Coffee size={24} /></div><h4>CAFÉS</h4><p>Ambience reels, Google Maps presence, and menus that attract the right crowd.</p></div>
-        <div className="industry-card reveal reveal-d3"><div className="ind-circle"><Building2 size={24} /></div><h4>REAL ESTATE</h4><p>Property showcases, lead capture pages, and Google Ads for brokers and developers.</p></div>
-        <div className="industry-card reveal reveal-d4"><div className="ind-circle"><Rocket size={24} /></div><h4>STARTUPS</h4><p>Go-to-market websites, social presence, and digital infrastructure for new ventures.</p></div>
+        <div className="industry-card reveal reveal-d1"><div className="ind-circle"><UtensilsCrossed size={32} /></div><h4>RESTAURANTS</h4><p>Menus, delivery pages, Google presence, and food reels that fill tables.</p></div>
+        <div className="industry-card reveal reveal-d2"><div className="ind-circle"><Scissors size={32} /></div><h4>SALONS &amp; SPAS</h4><p>Booking pages, service galleries, and Instagram content that builds clientele.</p></div>
+        <div className="industry-card reveal reveal-d3"><div className="ind-circle"><Stethoscope size={32} /></div><h4>CLINICS</h4><p>Professional websites, appointment systems, and local SEO for healthcare providers.</p></div>
+        <div className="industry-card reveal reveal-d4"><div className="ind-circle"><Store size={32} /></div><h4>BOUTIQUES</h4><p>Product showcases, WhatsApp catalogues, and Reels that drive walk-ins.</p></div>
+        <div className="industry-card reveal reveal-d1"><div className="ind-circle"><Dumbbell size={32} /></div><h4>GYMS &amp; STUDIOS</h4><p>Class schedules, membership pages, and content that builds a local fitness brand.</p></div>
+        <div className="industry-card reveal reveal-d2"><div className="ind-circle"><Coffee size={32} /></div><h4>CAFÉS</h4><p>Ambience reels, Google Maps presence, and menus that attract the right crowd.</p></div>
+        <div className="industry-card reveal reveal-d3"><div className="ind-circle"><Home size={32} /></div><h4>REAL ESTATE</h4><p>Property showcases, lead capture pages, and Google Ads for brokers and developers.</p></div>
+        <div className="industry-card reveal reveal-d4"><div className="ind-circle"><Rocket size={32} /></div><h4>STARTUPS</h4><p>Go-to-market websites, social presence, and digital infrastructure for new ventures.</p></div>
       </div>
     </section>
   );
@@ -288,10 +288,10 @@ function WhySection() {
           </div>
         </div>
         <div className="why-grid reveal reveal-d1">
-          <div className="why-card"><div className="why-card-icon"><Zap size={24} /></div><h5>FAST DELIVERY</h5><p>Websites in 5–7 days. Social content live within the week. No waiting.</p></div>
-          <div className="why-card"><div className="why-card-icon"><Tags size={24} /></div><h5>HONEST PRICES</h5><p>Starting at ₹7,000. No hidden costs. EMI available. Annual discount of 20%.</p></div>
-          <div className="why-card"><div className="why-card-icon"><MapPin size={24} /></div><h5>LOCAL EXPERTISE</h5><p>Based in Phagwara. We understand Punjab markets, customers, and culture.</p></div>
-          <div className="why-card"><div className="why-card-icon"><BarChart3 size={24} /></div><h5>REAL RESULTS</h5><p>340% average reach increase. 2.8× more enquiries. 94% client retention.</p></div>
+          <div className="why-card"><div className="why-card-icon"><Zap size={32} /></div><h5>FAST DELIVERY</h5><p>Websites in 5–7 days. Social content live within the week. No waiting.</p></div>
+          <div className="why-card"><div className="why-card-icon"><Tags size={32} /></div><h5>HONEST PRICES</h5><p>Starting at ₹7,000. No hidden costs. EMI available. Annual discount of 20%.</p></div>
+          <div className="why-card"><div className="why-card-icon"><MapPin size={32} /></div><h5>LOCAL EXPERTISE</h5><p>Based in Phagwara. We understand Punjab markets, customers, and culture.</p></div>
+          <div className="why-card"><div className="why-card-icon"><BarChart3 size={32} /></div><h5>REAL RESULTS</h5><p>340% average reach increase. 2.8× more enquiries. 94% client retention.</p></div>
         </div>
       </div>
     </section>
