@@ -41,29 +41,46 @@
   margin: 0 auto;
 }
 
-.card {
-  background: var(--bg);
+/* Premium Card Implementation */
+.premiumCard {
+  position: relative;
+  background: var(--bg-card);
   border-radius: var(--r-md);
   overflow: hidden;
-  transition: transform 0.25s;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  border: 1px solid rgba(17, 17, 17, 0.04);
 }
-.card:hover { transform: translateY(-6px); }
 
-.cardImg {
-  position: relative;
-  padding-bottom: 60%;
-  background: var(--black);
-  overflow: hidden;
+.premiumCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 32px -12px rgba(17, 17, 17, 0.12);
+  background: var(--bg);
 }
-.cardImg img {
+
+.premiumImgWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+  overflow: hidden;
+  background: var(--black);
+}
+
+.premiumImg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+  opacity: 0.9;
 }
-.card:hover .cardImg img { transform: scale(1.04); }
+
+.premiumCard:hover .premiumImg {
+  transform: scale(1.04);
+  opacity: 1;
+}
 
 .imgPlaceholder {
   position: absolute;
@@ -72,64 +89,123 @@
   align-items: center;
   justify-content: center;
 }
+
 .imgPlaceholder span {
   font-family: var(--font-hero);
   font-size: 2rem;
   letter-spacing: 0.2em;
-  color: rgba(240,242,241,0.12);
+  color: rgba(255,255,255,0.2);
 }
 
-.visitBtn {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background: var(--black);
-  color: var(--off-white);
-  padding: 8px 16px;
-  border-radius: 50px;
+.premiumBody {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent;
+}
+
+.premiumHeader {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.premiumBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.premiumBadge {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background: rgba(17, 17, 17, 0.05);
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.premiumTitle {
+  font-family: var(--font-hero);
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--black);
+  margin: 0;
+}
+
+.premiumDesc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--grey-mid);
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.premiumFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.premiumStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--black);
+  animation: pulse-dot 2.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4); }
+  70% { transform: scale(1); box-shadow: 0 0 0 4px rgba(17, 17, 17, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(17, 17, 17, 0); }
+}
+
+.statusText {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+}
+
+.premiumBtn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--black);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(17, 17, 17, 0.2);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.25s, transform 0.25s;
-}
-.card:hover .visitBtn {
-  opacity: 1;
-  transform: translateY(0);
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  background: transparent;
 }
 
-.cardBody {
-  padding: 24px;
+.premiumCard:hover .premiumBtn {
+  background: var(--black);
+  color: var(--off-white);
+  border-color: var(--black);
 }
-.cardTitle {
-  font-family: var(--font-hero);
-  font-size: 1.4rem;
-  letter-spacing: 0.04em;
-  color: var(--black);
-  margin-bottom: 8px;
-}
-.cardDesc {
-  font-size: 0.82rem;
-  color: var(--grey-mid);
-  line-height: 1.65;
-  font-weight: 300;
-  margin-bottom: 12px;
-}
-.cardLink {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  color: var(--grey-lt);
-  text-decoration: none;
-  text-transform: lowercase;
-  transition: color 0.2s;
-}
-.cardLink:hover { color: var(--black); }
 
 /* Reviews */
 .reviewSection {
