@@ -2,7 +2,8 @@
 // components/PricingSection.tsx
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { getPlansByCategory } from "@/data/plans";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
 import { Plan } from "@/types";
 
 type Tab = "website" | "monthly" | "video";
@@ -10,10 +11,11 @@ type Tab = "website" | "monthly" | "video";
 export default function PricingSection() {
   const [tab, setTab] = useState<Tab>("website");
 
-  const plans: Plan[] = getPlansByCategory(tab);
+  const plans = useQuery((api as any).plans.getPlansByCategory, { category: tab });
 
-  // Trigger scroll reveal for newly rendered cards when tab changes
+  // Trigger scroll reveal for newly rendered cards when tab changes or when plans load
   useEffect(() => {
+    if (!plans || plans.length === 0) return;
     const els = document.querySelectorAll(`#tab-${tab} .reveal`);
     const obs = new IntersectionObserver(
       (entries) => {
@@ -31,7 +33,7 @@ export default function PricingSection() {
       obs.observe(el);
     });
     return () => obs.disconnect();
-  }, [tab]);
+  }, [tab, plans]);
 
   return (
     <section id="pricing">
@@ -64,11 +66,13 @@ export default function PricingSection() {
 
       {/* Cards Panel */}
       <div className="pricing-panel active" id={`tab-${tab}`}>
-        {plans.length === 0 ? (
-          <p style={{ color: "var(--gray)", padding: "40px 0" }}>No plans found.</p>
+        {plans === undefined ? (
+          <p style={{ color: "var(--grey-mid)", padding: "40px 0" }}>Loading plans...</p>
+        ) : plans.length === 0 ? (
+          <p style={{ color: "var(--grey-mid)", padding: "40px 0" }}>No plans found.</p>
         ) : (
-          plans.map((plan, i) => (
-            <PlanCard key={plan.id} plan={plan} index={i + 1} />
+          plans.map((plan: any, i: number) => (
+            <PlanCard key={plan._id} plan={plan} index={i + 1} />
           ))
         )}
       </div>
