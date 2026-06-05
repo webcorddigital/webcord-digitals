@@ -21,5 +21,7 @@ export const getPlanBySlug = (slug: string): Plan | undefined =>
 export const getPlansByCategory = (category: string): Plan[] =>
   PLANS.filter((p) => p.category === category);
 
-export const getReviewsForPlan = (planId: string): Review[] =>
-  REVIEWS[planId] ?? REVIEWS["web-business"]?.slice(0, 2) ?? [];
+export const getReviewsForPlan = (planIdOrSlug: string): Review[] => {
+  // Try exact match, otherwise fallback to generic reviews
+  return REVIEWS[planIdOrSlug] ?? REVIEWS["web-business"] ?? [];
+};
