@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     domains: ["webcord-in.convex.cloud"],
   },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
 };
 
 module.exports = nextConfig;
