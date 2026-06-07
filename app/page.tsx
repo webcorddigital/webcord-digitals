@@ -9,10 +9,15 @@ import {
   Zap, Tags, MapPin, BarChart3, Handshake, CheckCircle2, Ban, CreditCard, MessageSquare
 } from "lucide-react";
 import content from "@/data/content.json";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
 
-const { contactInfo, homepageServices } = content;
+const { contactInfo: fallbackContactInfo, homepageServices } = content;
 
 export default function HomePage() {
+  const dbContactInfo = useQuery(api.settings.getSetting, { key: "contact_info" });
+  const contactInfo = dbContactInfo || fallbackContactInfo;
+
   // Scroll-reveal observer
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
